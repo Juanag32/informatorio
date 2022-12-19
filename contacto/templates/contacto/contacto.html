@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="contenedorFormulario">
+    <h3 class=" border text-center">Este es un formulario para que se hagan consultas, denuncias y pedido de informacion sobre animales.</h3>
+    {% if "valido" in request.GET %}
+
+        <p style="color: blue";>Información enviada correctamente, gracias</p>
+
+    {% endif %}
+    
+    <form action="" method="POST" style="text-align: center;">
+        {% csrf_token %}
+        <table style="color: black; margin: 20px auto;">{{miFormulario.as_table}}</table>
+        <input type="submit" value="Enviar" style="width: 150px;">
+
+    </form>
+   
+</div>
+
+{% endblock %}

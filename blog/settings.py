@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'autenticacion',
     'crispy_forms',
+    'contacto',
 ]
 
 MIDDLEWARE = [
