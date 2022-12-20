@@ -16,28 +16,29 @@
     <link href={% static 'core/css/blog.css' %} rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <img class="bi me-2" width="100" height="100" src={% static 'core/img/logo.jpg' %}>
-        <span class="fs-4">Apach Charata</span>
-      </a>
+    <nav class="navbar navbar-expand-lg" style="background-color: #A6FBF9;">
+    <div class="container navbar-nav mx-auto">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 ">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <img class="bi me-2" width="100" height="100" style="border-radius: 80px;" src={% static 'core/img/logo.jpg' %}>
+          <span class="fs-4">Apach Charata</span>
 
-        <div style="text-align: right; margin-right: 100px; color: black;"><!--<h4>Texto ejemplo</h4>--></div>
+          <div style="text-align: right; margin-right: 200px; color: black;"><!--<h4>Texto ejemplo</h4>--></div>
 
-        <a href="{% url 'Contacto' %}"> Contacto</a>&nbsp; &nbsp;
+          <a class="nav-link" href="{% url 'Contacto' %}"><h4>Contacto</h4></a>&nbsp; &nbsp;
 
-        {% if user.is_authenticated %}
+          {% if user.is_authenticated %}
 
-        Hola {{ user.username}} &nbsp; &nbsp;<a href="{% url 'cerrar_sesion' %}">Cerrar sesión</a> 
+          Hola {{ user.username}} &nbsp; &nbsp;<a class="nav-link" href="{% url 'cerrar_sesion' %}"><h4>Cerrar sesión</h4></a> 
 
-        {% else %}
+          {% else %}
 
-        <a href="{% url 'logear' %}">Iniciar sesión</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}">Registrate</a>
+          <a class="nav-link" href="{% url 'logear' %}"><h4>Iniciar sesión</h4></a> &nbsp; &nbsp; <a class="nav-link" href="{% url 'Autenticacion' %}"><h4>Registrate</h4></a>
 
-        {% endif %}
+          {% endif %}
 
-    </header>
+      </header>
+    </nav>
 
     <main class="mt-2">
       <section class="row g-5">
