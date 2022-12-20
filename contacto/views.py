@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 from .forms import FormularioContacto
 
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage, send_mail
 
 
 # Create your views here.
